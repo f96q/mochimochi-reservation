@@ -40,3 +40,4 @@ gem 'spring',        group: :development
 
 gem 'rails-assets-vue'
 gem 'haml-rails'
+gem 'bootstrap-sass'
