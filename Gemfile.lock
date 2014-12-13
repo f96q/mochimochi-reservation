@@ -43,6 +43,8 @@ GEM
     coffee-script-source (1.8.0)
     erubis (2.7.0)
     execjs (2.2.2)
+    font-awesome-rails (4.2.0.0)
+      railties (>= 3.2, < 5.0)
     haml (4.1.0.beta.1)
       tilt
     haml-rails (0.6.0)
@@ -133,6 +135,7 @@ DEPENDENCIES
   autoprefixer-rails
   bootstrap-sass
   coffee-rails (~> 4.0.0)
+  font-awesome-rails
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
