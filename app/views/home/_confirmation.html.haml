@@ -1,0 +1,30 @@
+.form-horizontal{role: 'form', 'v-show' => "status == 'confirmation'"}
+  .form-group{'v-show' => "motimotiVol1Count > 1"}
+    .col-sm-2
+      = image_tag 'motimoti-vol1-cover.jpg', class: 'img-thumbnail'
+    .col-sm-10
+      .row
+        %label.col-sm-5.control-label{type: 'text'} もちもちテクニックVol.1 2014 Summer
+        %p.col-sm-5.form-control-static {{motimotiVol1Count}} 部
+
+  .form-group
+    %label.col-sm-2.control-label{type: 'text'} 名前
+    .col-sm-10
+      %p.form-control-static {{name}}
+
+  .form-group
+    %label.col-sm-2.control-label メールアドレス
+    .col-sm-10
+      %p.form-control-static {{email}}
+
+  .form-group
+    %label.col-sm-2.control-label ご意見、その他
+    .col-sm-10
+      %p.form-control-static {{content}}
+
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      %button.btn.btn-default{'v-on' => "click: switchStatus('form')"} 戻る
+      %button.btn.btn-default{'v-on' => "click: switchStatus('completion')"} 確定
+
+

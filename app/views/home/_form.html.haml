@@ -1,0 +1,57 @@
+.form-horizontal{role: 'form', 'v-show' => "status == 'form'"}
+  .form-group
+    .col-sm-4
+      = image_tag 'motimoti-vol1-cover.jpg', class: 'img-thumbnail'
+    .col-sm-8
+      .row
+        %label.col-sm-4.control-label タイトル
+        %label.col-sm-4.control-label もちもちテクニックVol.1 2014 Summer
+      .row
+        %label.col-sm-4.control-label 初出
+        %label.col-sm-4.control-label コミックマーケット86
+      .row
+        %label.col-sm-4.control-label 価格
+        %label.col-sm-4.control-label
+          %i.fa.fa-jpy
+      .row
+        %label.col-sm-4.control-label サンプル
+        %label.col-sm-4.control-label=link_to 'motimoti-vol1.pdf', 'samples/motimoti-vol1.pdf'
+      .row
+        %label.col-sm-4.control-label 収録内容
+        .col-sm-4
+          %ul
+            %li 1章 Ember.js+Railsでマイ妖怪図鑑をつくる
+            %li 2章 Docker入門
+      .row
+        %label.col-sm-4.control-label 部数
+        .col-sm-4
+          %select.form-control{'v-model' => 'motimotiVol1Count'}
+            %option
+            %option 1
+            %option 2
+            %option 3
+            %option 4
+            %option 5
+
+  .form-group
+    %label.col-sm-2.control-label{type: 'text', for: 'inputName'}
+      名前
+      %i.fa.fa-asterisk
+    .col-sm-10
+      %input.form-control#inputName{'v-model' => 'name'}
+
+  .form-group
+    %label.col-sm-2.control-label{for: 'inputEmail'}
+      メールアドレス
+      %i.fa.fa-asterisk
+    .col-sm-10
+      %input.form-control#inputEmail{type: 'email', 'v-model' => 'email'}
+
+  .form-group
+    %label.col-sm-2.control-label{for: 'inputContent'} ご意見、その他
+    .col-sm-10
+      %textarea.form-control#inputContent{rows: 15, 'v-model' => 'content'}
+
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      %button.btn.btn-default{'v-on' => "click: switchStatus('confirmation')"} 次へ
