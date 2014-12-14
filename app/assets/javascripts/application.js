@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require vue
+//= require vue-validator
 //= require_tree .
