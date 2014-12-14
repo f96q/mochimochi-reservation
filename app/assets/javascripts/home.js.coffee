@@ -2,6 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+Vue.use @['vue-validator']
+
 $ ->
   if $('.js-reservation')[0]
     new Vue

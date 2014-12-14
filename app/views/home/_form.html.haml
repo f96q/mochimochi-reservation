@@ -38,14 +38,14 @@
       名前
       %i.fa.fa-asterisk
     .col-sm-10
-      %input.form-control#inputName{'v-model' => 'name'}
+      %input.form-control#inputName{'v-model' => 'name', 'v-validate' => 'required'}
 
   .form-group
     %label.col-sm-2.control-label{for: 'inputEmail'}
       メールアドレス
       %i.fa.fa-asterisk
     .col-sm-10
-      %input.form-control#inputEmail{type: 'email', 'v-model' => 'email'}
+      %input.form-control#inputEmail{type: 'email', 'v-model' => 'email', 'v-validate' => 'required'}
 
   .form-group
     %label.col-sm-2.control-label{for: 'inputContent'} ご意見、その他
@@ -54,4 +54,4 @@
 
   .form-group
     .col-sm-offset-2.col-sm-10
-      %button.btn.btn-default{'v-on' => "click: switchStatus('confirmation')"} 次へ
+      %button.btn.btn-default{'v-on' => "click: switchStatus('confirmation')", 'v-attr' => 'disabled: !valid'} 次へ
