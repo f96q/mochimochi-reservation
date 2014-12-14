@@ -13,3 +13,9 @@ $ ->
       methods:
         switchStatus: (status) ->
           @status = status
+        clear: ->
+          @status = 'form'
+          @motimotiVol1Count = null
+          @name = null
+          @email = null
+          @content = null
