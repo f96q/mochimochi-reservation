@@ -45,6 +45,7 @@ gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 gem 'google_drive'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'rspec-rails'
