@@ -46,6 +46,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 gem 'google_drive'
 gem 'dotenv-rails'
+gem 'validates_email_format_of'
 
 group :development, :test do
   gem 'rspec-rails'
