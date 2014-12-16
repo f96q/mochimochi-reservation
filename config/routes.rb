@@ -55,4 +55,8 @@ Rails.application.routes.draw do
   #   end
 
   root 'home#index'
+
+  namespace :api do
+    resources :contacts, only: [:create]
+  end
 end
