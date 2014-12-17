@@ -1,4 +1,7 @@
 .form-horizontal{role: 'form', 'v-show' => "status == 'confirmation'"}
+  .alert.alert-danger{role: 'alert', 'v-show' => 'errors.length > 0'}
+    %p{'v-repeat' => 'error: errors'} {{error}}
+
   .form-group{'v-show' => "motimotiVol1Count > 1"}
     .col-sm-2
       = image_tag 'motimoti-vol1-cover.jpg', class: 'img-thumbnail'
@@ -25,6 +28,6 @@
   .form-group
     .col-sm-offset-2.col-sm-10
       %button.btn.btn-default{'v-on' => "click: switchStatus('form')"} 戻る
-      %button.btn.btn-default{'v-on' => "click: switchStatus('completion')"} 確定
+      %button.btn.btn-default{'v-on' => "click: postContact()"} 確定
 
 

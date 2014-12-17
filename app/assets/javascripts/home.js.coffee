@@ -10,8 +10,10 @@ $ ->
       el: '.js-reservation'
       data:
         status: 'form'
+        errors: []
       methods:
         switchStatus: (status) ->
+          @errors = []
           @status = status
         clear: ->
           @status = 'form'
@@ -19,3 +21,18 @@ $ ->
           @name = null
           @email = null
           @content = null
+        postContact: ->
+          $.ajax(
+            method: 'post'
+            url: '/api/contacts'
+            data:
+              contact:
+                name: @name
+                email: @email
+                content: @content
+                motimoti_vol1_count: @motimotiVol1Count
+          ).done((data) =>
+            @switchStatus('completion')
+          ).fail((data) =>
+            @errors = data.responseJSON.errors
+          )
