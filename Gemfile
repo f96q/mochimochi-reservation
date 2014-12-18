@@ -47,6 +47,7 @@ gem 'font-awesome-rails'
 gem 'google_drive'
 gem 'dotenv-rails'
 gem 'validates_email_format_of'
+gem 'rails-i18n'
 
 group :development, :test do
   gem 'rspec-rails'
