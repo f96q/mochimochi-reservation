@@ -1,0 +1,7 @@
+ja:
+  activemodel:
+    attributes:
+      contact:
+        name: 名前
+        email: メールアドレス
+        content: ご意見、その他
