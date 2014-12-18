@@ -21,7 +21,8 @@ class Contact
   ATTRIBUTES = [
     :name,
     :email,
-    :content
+    :content,
+    :motimoti_vol1_count
   ]
 
   ATTRIBUTES.each {|attr| attr_accessor attr }
@@ -29,4 +30,5 @@ class Contact
 
   validates :name, presence: true
   validates :email, presence: true, email_format: {if: ->(this) { this.email.present? }}
+  validates :motimoti_vol1_count, numericality: {only_integer: true, greater_than: 0}, allow_blank: true
 end
