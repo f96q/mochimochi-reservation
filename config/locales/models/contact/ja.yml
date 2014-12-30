@@ -5,3 +5,9 @@ ja:
         name: 名前
         email: メールアドレス
         content: ご意見、その他
+    errors:
+      models:
+        contact:
+          attributes:
+            email:
+              invalid_email_address: は不正な値です。
